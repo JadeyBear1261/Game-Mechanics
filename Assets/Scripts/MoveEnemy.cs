@@ -8,8 +8,8 @@ public class MoveEnemy : MonoBehaviour {
 	private int currentWaypoint = 0;
 	private float lastWaypointSwitchTime;
 	public float speed = 1.0f;
-	//this calculates the length of road not travelled by enemy using Vector 2.Distance. Uses this information to shoot enemy closest to cookie
-	public float DistanceToGoal()
+
+	public float DistanceToGoal()	//this calculates the length of road not travelled by enemy using Vector 2.Distance. Uses this information to shoot enemy closest to cookie
 	{
 		float distance = Vector2.Distance(gameObject.transform.position, waypoints[currentWaypoint + 1].transform.position);
 		for (int i = currentWaypoint + 1; i < waypoints.Length - 1; i++)
